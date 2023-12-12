@@ -1,0 +1,7 @@
+table tbody tr td {
+    border: 1px solid black;
+}
+
+.table__title {
+    font-size: 32px;
+}
