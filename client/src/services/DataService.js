@@ -7,139 +7,68 @@ const http = axios.create({
 });
 
 class DataService {
-	getTeachers() {
-		return http.get("/teachers");
+	getClients() {
+		return http.get("/clients");
 	}
-	getTeacherRaw(id) {
-		return http.get(`/teacher-raw/${id}`);
+	createClient(data) {
+		return http.post("/client", data);
 	}
-	createTeacher(data) {
-		return http.post("/teacher", data);
+	updateClient(id, data) {
+		return http.put(`/client/${id}`, data);
 	}
-	updateTeacher(id, data) {
-		return http.put(`/teacher/${id}`, data);
+	deleteClient(id) {
+		return http.delete(`/client/${id}`);
 	}
-	deleteTeacher(id) {
-		return http.delete(`/teacher/${id}`);
-	}
-
-	getStudents() {
-		return http.get("/students");
-	}
-	getStudentRaw(id) {
-		return http.get(`/student-raw/${id}`);
-	}
-	createStudent(data) {
-		return http.post("/student", data);
-	}
-	updateStudent(id, data) {
-		return http.put(`/student/${id}`, data);
-	}
-	deleteStudent(id) {
-		return http.delete(`/student/${id}`);
+	getClient(full_name) {
+		return http.get(`/client/${full_name}`);
 	}
 
-	getFreeTeacherTopics(id) {
-		return http.get(`/free-teacher-topics/${id}`);
+	getProviders() {
+		return http.get("/providers");
+	}
+	createProvider(data) {
+		return http.post("/provider", data);
+	}
+	updateProvider(id, data) {
+		return http.put(`/provider/${id}`, data);
+	}
+	deleteProvider(id) {
+		return http.delete(`/provider/${id}`);
+	}
+	getProvider(id) {
+		return http.get(`/provider/${id}`);
 	}
 
-	getGroups() {
-		return http.get("/groups");
+	getModels() {
+		return http.get("/models");
 	}
-	getGroupRaw(id) {
-		return http.get(`/group-raw/${id}`);
+	createModel(data) {
+		return http.post("/model", data);
 	}
-	createGroup(data) {
-		return http.post("/group", data);
+	updateModel(id, data) {
+		return http.put(`/model/${id}`, data);
 	}
-	updateGroup(id, data) {
-		return http.put(`/group/${id}`, data);
+	deleteModel(id) {
+		return http.delete(`/model/${id}`);
 	}
-	deleteGroup(id) {
-		return http.delete(`/group/${id}`);
-	}
-
-	getDepartments() {
-		return http.get("/departments");
-	}
-	getDepartmentRaw(id) {
-		return http.get(`/department-raw/${id}`);
-	}
-	createDepartment(data) {
-		return http.post("/department", data);
-	}
-	updateDepartment(id, data) {
-		return http.put(`/department/${id}`, data);
-	}
-	deleteDepartment(id) {
-		return http.delete(`/department/${id}`);
+	getModel(id) {
+		return http.get(`/model/${id}`);
 	}
 
-	getScienceDegrees() {
-		return http.get("/science-degrees");
+	getPrices() {
+		return http.get("/prices");
 	}
-	getScienceDegreeRaw(id) {
-		return http.get(`/science-degree-raw/${id}`);
+	createPrice(data) {
+		return http.post("/price", data);
 	}
-	createScienceDegree(data) {
-		return http.post("/science-degree", data);
+	updatePrice(id, data) {
+		return http.put(`/price/${id}`, data);
 	}
-	updateScienceDegree(id, data) {
-		return http.put(`/science-degree/${id}`, data);
+	deletePrice(id) {
+		return http.delete(`/price/${id}`);
 	}
-	deleteScienceDegree(id) {
-		return http.delete(`/science-degree/${id}`);
-	}
-
-	getTeacherRanks() {
-		return http.get("/teacher-ranks");
-	}
-	getTeacherRankRaw(id) {
-		return http.get(`/teacher-rank-raw/${id}`);
-	}
-	createTeacherRank(data) {
-		return http.post("/teacher-rank", data);
-	}
-	updateTeacherRank(id, data) {
-		return http.put(`/teacher-rank/${id}`, data);
-	}
-	deleteTeacherRank(id) {
-		return http.delete(`/teacher-rank/${id}`);
-	}
-
-	getFaculties() {
-		return http.get("/faculties");
-	}
-	getFacultyRaw(id) {
-		return http.get(`/faculty-raw/${id}`);
-	}
-	createFaculty(data) {
-		return http.post("/faculty", data);
-	}
-	updateFaculty(id, data) {
-		return http.put(`/faculty/${id}`, data);
-	}
-	deleteFaculty(id) {
-		return http.delete(`/faculty/${id}`);
-	}
-
-	getTopics() {
-		return http.get("/topics");
-	}
-	getTopicRaw(id) {
-		return http.get(`/topic-raw/${id}`);
-	}
-	getTopic(id) {
-		return http.get(`/topic/${id}`);
-	}
-	createTopic(data) {
-		return http.post("/topic", data);
-	}
-	updateTopic(id, data) {
-		return http.put(`/topic/${id}`, data);
-	}
-	deleteTopic(id) {
-		return http.delete(`/topic/${id}`);
+	getPrice(id) {
+		return http.get(`/price/${id}`);
 	}
 }
 
